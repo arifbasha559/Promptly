@@ -2,7 +2,7 @@ import { GoogleGenAI } from "@google/genai";
 
 const fetchContentAIResponse = async (category) => {
     const API_URL = `https://api.contentai.cloud/v1/Text/blog-articles?category=${encodeURIComponent(category)}`;
-    const API_KEY = import.meta.env.VITE_CONTENTAI_API;
+    const API_KEY = '2a00eb5b9d6b40e1b546f735e5918cdf';
 
     try {
         const response = await fetch(API_URL, {
@@ -85,7 +85,7 @@ async function fetchPollinationsResponse(prompt) {
 
 async function fetchGeminiResponse(prompt) {
     try {
-        const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINIAI_API });
+        const ai = new GoogleGenAI({ apiKey: 'AIzaSyCgWQEqSYKamPM1J3rt-v1VhfKa1pI1xUU' });
 
         const response = await ai.models.generateContent({
             model: "gemini-2.5-flash",
