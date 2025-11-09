@@ -14,7 +14,7 @@ function typeEffect(text, setMessages, delay = 20) {
         setMessages((prev) => {
             const last = prev[prev.length - 1];
             const isTyping = i < text.length;
-            const displayText = text.slice(0, i) + (isTyping ? "|" : ""); // ▋ acts as cursor
+            const displayText = text.slice(0, i) + (isTyping ? "|" : ""); 
 
             if (last.role === "ai") {
                 const updated = [...prev];
